@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="realtime-process" target="1.5" />
+      <module name="realtime-process" target="1.8" />
       <module name="realtime-process-demo" target="1.5" />
       <module name="realtime-project" target="1.5" />
       <module name="tal_bdc_rtp_service" target="1.5" />

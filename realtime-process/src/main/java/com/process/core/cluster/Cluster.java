@@ -1,14 +1,11 @@
 package com.process.core.cluster;
 
-import com.process.core.util.NetworkUtil;
-import com.process.core.util.SerializableUtil;
 import com.process.core.Component;
 import com.process.core.rpc.JobManagerHandlerService;
+import com.process.core.util.NetworkUtil;
+import com.process.core.util.SerializableUtil;
 import org.apache.thrift.TException;
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TProtocol;
-import org.apache.thrift.transport.TSocket;
-import org.apache.thrift.transport.TTransport;
+import org.apache.thrift.transport.TTransportException;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -24,7 +21,7 @@ public class Cluster {
 
     public void submit(String name, HashMap<String, Component> components, int jvmNum) throws IOException, TException {
         if (client == null) {
-            client =   NetworkUtil.initJobManagerClient("127.0.0.1",9966,30000);
+            client =   NetworkUtil.initJobManagerClient("127.0.0.1",9999,30000);
         }
         String obj = SerializableUtil.serializable(components);
         String s = client.submitJob(name,obj,jvmNum);
