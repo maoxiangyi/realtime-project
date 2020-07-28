@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/realtime-process/realtime-process.iml" filepath="$PROJECT_DIR$/realtime-process/realtime-process.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-process-demo/realtime-process-demo.iml" filepath="$PROJECT_DIR$/realtime-process-demo/realtime-process-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realtime-project.iml" filepath="$PROJECT_DIR$/realtime-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tal_bdc_rtp_service.iml" filepath="$PROJECT_DIR$/tal_bdc_rtp_service.iml" />
+    </modules>
+  </component>
+</project>
