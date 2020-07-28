@@ -25,6 +25,26 @@ public class JobManagerHandlerServiceImpl implements JobManagerHandlerService.If
 
 
     public JobManagerHandlerServiceImpl() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    AssignJob assignJob = null;
+                    try {
+                        assignJob = FIFOScheduler.getQueue().take();
+                        execute(assignJob);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (TException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
     }
 
     private HashMap<String, TaskManagerInfo> taskManagerInfoHashMap = new HashMap<>();

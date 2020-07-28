@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.mxy.rt</groupId>
-            <artifactId>realtime-process</artifactId>
+            <artifactId>realtime-process-core</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
