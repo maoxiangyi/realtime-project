@@ -16,7 +16,6 @@
             <groupId>com.mxy.rt</groupId>
             <artifactId>realtime-process-core</artifactId>
             <version>1.0</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
